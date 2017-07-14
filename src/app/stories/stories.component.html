@@ -1,8 +1,15 @@
-<div class="main-content">
-  <ol>
-    <li *ngFor="let item of items; let i = index" class="post">
-      Story #{{i}}
-    </li>
-  </ol>
-  
+<div>
+<ul class="list-group">
+
+  <a class="list-group-item" *ngFor="let item of stories; let i = index" href="{{item.url}}">
+    <span class="badge">{{item.author}}</span>
+    {{item.title}}
+    <p class="mb-1">{{item.description}}</p>
+  </a>
+</ul>
 </div>
+
+
+
+
+
